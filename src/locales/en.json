@@ -1,0 +1,13 @@
+{
+  "message": {
+    "introduction":"Hi I am Ocholiba",
+    "paragraph":"Games are my biggest passion. In September 2020, i started streaming just for my fun.",
+    "playing": "I am playing "
+  },
+  "genres":{
+    "rpg":"role playing games",
+    "sim":"simulation games",
+    "pg":"platform games",
+    "ag":"action games"
+  }
+}

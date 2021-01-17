@@ -1,0 +1,13 @@
+{
+  "message": {
+    "introduction":"Merhaba, ben Ocholiba",
+    "paragraph":"Eylül 2020 itibariyle en büyük tutkum olan oyunları canlı yayında oynamaya başladım.",
+    "playing": "Oynadığım türler: "
+  },
+  "genres":{
+    "rpg":"rol yapma oyunları",
+    "sim":"simülasyon oyunları",
+    "pg":"platform oyunları",
+    "ag":"aksiyon oyunları"
+  }
+}
