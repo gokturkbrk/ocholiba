@@ -1,6 +1,7 @@
 <template>
+  <div>
   <div class="container">
-      <div class="logo"></div>
+    <div class="logo"></div>
     <div class="headline">
       <vue-typed-js
         :strings="[$t('genres.rpg'),$t('genres.sim'),$t('genres.pg'),$t('genres.ag')]"
@@ -26,84 +27,36 @@
         <div class="icon-container"><a href="https://twitter.com/ocholiba" title="Twitter" target="_blank"><i class="lni lni-xl lni-twitter-original"></i></a></div>
       </div>
     </div>
+    <b-modal ref="my-modal" hide-footer title="Yarışma Kuralları">
+      <div class="d-block text-center">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores laboriosam maxime cumque, debitis, accusamus quaerat, suscipit similique veniam reiciendis aperiam nostrum. Nemo dicta eveniet voluptas eum placeat vitae alias sunt?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus tenetur asperiores harum! Delectus quisquam alias libero illum temporibus amet ab placeat fuga soluta consequuntur, quaerat hic omnis voluptates exercitationem beatae?</p>
+      </div>
+      <b-button id="toggle-btn" @click="toggleModal">Kapat</b-button>
+    </b-modal>
+    </div>
     <div class="footer">
-      <span>Photo by <a href="https://unsplash.com/@chilinik?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Nikita Kostrykin</a> on <a href="https://unsplash.com/s/photos/controller?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+      <div class="credits">
+        <span>Photo by <a href="https://unsplash.com/@chilinik?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Nikita Kostrykin</a> on <a href="https://unsplash.com/s/photos/controller?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+      </div>
+      <div>
+        <b-button id="toggle-btn" @click="toggleModal">Yarışma Kuralları</b-button>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    toggleModal () {
+    // We pass the ID of the button that we want to return focus to
+    // when the modal has hidden
+      this.$refs['my-modal'].toggle('#toggle-btn')
+    }
+  }
+}
 </script>
 
 <style lang="css">
-.footer{
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-}
-.footer a{
-  text-decoration: none;
-  color: inherit;
-}
-.lni-xl{
-  font-size: 3em;
-  margin: 0 10px;
-}
-.social .icon{
-  display: flex;
-  justify-content: center;
-}
-.social .icon a{
-  text-decoration: none;
-  color: inherit;
-}
-.logo{
-    background-image: url('../assets/ocholiba.png');
-    background-blend-mode: overlay;
-    width: 120px;
-    height: 120px;
-  margin-top: 10vh;
-  margin-left: auto;
-  margin-right: auto;
-  background-size: cover;
-}
-mark {
-  background: #552ebf;
-}
-.typing {
-  color: wheat;
-}
-.typed-element {
-  justify-content: center;
-}
-.typed-element span.typed-cursor {
-  font-size: 3vw;
-  color: wheat;
-}
-h1 {
-  font-size: 3vw;
-}
-.paragraph{
-    font-size: 12px;
-}
-@media screen and (max-width: 767px) {
-  .typed-element span.typed-cursor,
-  h1 {
-    font-size: 6vw;
-  }
-  .paragraph{
-      font-size: 19px;
-  }
-
-.lni-xl{
-  font-size: 2em;
-}
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .typed-element span.typed-cursor,
-  h1 {
-    font-size: 5vw;
-  }
-}
 </style>
